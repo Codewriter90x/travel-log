@@ -49,11 +49,29 @@ body {
     margin-top: 0;
     color: #34495e;
   }
-  .story .meta {
-    font-size: 0.9rem;
-    color: #888;
+
+  .story .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
   }
+  
+  .story .meta-row .meta {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .copy-link {
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .copy-link:hover {
+    color: #2c3e50;
+  }
+ 
   .story .tags {
     margin-top: 1rem;
     font-size: 0.85rem;

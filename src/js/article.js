@@ -6,15 +6,17 @@ let currentLang = 'it';
         $('#stories').html('');
         stories.forEach(story => {
           const photo = story.photo ? `<img src="${story.photo}" alt="${story.title}" />` : '';
-          const date = story.date ? `<div class="meta">${story.date}</div>` : '';
+          const date = story.date ? `<span class="meta">${story.date}</span>` : '';
           const tags = story.tags ? `<div class="tags">${story.tags.map(tag => `<span>${tag}</span>`).join('')}</div>` : '';
 
           $('#stories').append(`
             <div class="story" id="${story.id}">
               ${photo}
               <h2>${story.title}</h2> 
-              <div class="copy-link" title="Copia link" onclick="copyLink('${story.id}')">🔗</div>
-              ${date}
+                <div class="meta-row">
+                    <div class="meta">${story.date} ${story.city ? '— ' + story.city : ''} ${story.country ? '(' + story.country + ')' : ''}</div>
+                    <span class="copy-link" title="Copia link" onclick="copyLink('${story.id}')">🔗</span>
+                </div>
               <div class="content">${story.content}</div>
               ${tags}
             </div>
