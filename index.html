@@ -3,22 +3,73 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Log - Luca</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
-    body { font-family: sans-serif; margin: 2rem; background: #f9f9f9; }
-    h1, h2 { color: #333; }
-    .lang-selector { margin-right: 10px; cursor: pointer; text-decoration: underline; }
-    .story { margin-bottom: 2rem; padding: 1rem; background: #fff; border-radius: 8px; box-shadow: 0 0 4px rgba(0,0,0,0.1); }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .lang-selector {
+      margin: 1rem;
+      display: inline-block;
+      padding: 0.3rem 0.7rem;
+      background: #ecf0f1;
+      color: #2c3e50;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .lang-selector:hover {
+      background: #d0d3d4;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .story {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    .story h2 {
+      margin-top: 0;
+      color: #34495e;
+    }
+    .story p {
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
-  <h1>Travel Stories</h1>
-  <div>
-    <span class="lang-selector" data-lang="it">Italiano</span>
-    <span class="lang-selector" data-lang="en">English</span>
-  </div>
-  <div id="stories"></div>
+  <header>
+    <h1>🌍 Travel Stories</h1>
+    <div>
+      <span class="lang-selector" data-lang="it">Italiano</span>
+      <span class="lang-selector" data-lang="en">English</span>
+    </div>
+  </header>
+
+  <main>
+    <div id="stories"></div>
+  </main>
 
   <script>
     let currentLang = 'it';
