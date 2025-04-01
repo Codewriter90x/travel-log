@@ -10,7 +10,7 @@
           "date": "2023-08-14",
           "coords": [44.9256, 25.4564],
           "city": "Târgoviște",
-          "photo": "img/sarut.jpg",
+          "photo": "img/sarut-mana.jpg",
           "tags": ["lingua", "cultura", "tradizione", "incontro"]
         },
         {
@@ -20,7 +20,7 @@
           "date": "2023-08-16",
           "city": "Sinaia",
           "coords": [45.35, 25.55],
-          "photo": "img/sinaia-food.jpg",
+          "photo": "img/ristorante-sinaia.jpg",
           "tags": ["cibo", "esperienze", "viaggio", "romania"]
         }
       ]
@@ -34,7 +34,7 @@
           "date": "2023-08-14",
           "coords": [44.9256, 25.4564],
           "city": "Târgoviște",
-          "photo": "img/sarut.jpg",
+          "photo": "img/sarut-mana.jpg",
           "tags": ["language", "culture", "tradition", "connection"]
         },{
           "id": "ristorante-sinaia",
@@ -43,7 +43,7 @@
           "date": "2023-08-16",
           "city": "Sinaia",
           "coords": [45.35, 25.55],
-          "photo": "img/sinaia-food.jpg",
+          "photo": "img/ristorante-sinaia.jpg",
           "tags": ["food", "experience", "travel", "romania"]
         }
       ]
