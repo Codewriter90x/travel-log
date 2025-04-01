@@ -62,13 +62,13 @@ body {
     color: #888;
   }
   
-  .copy-link {
+  .story .meta-row .copy-link {
     font-size: 1.2rem;
     color: #888;
     cursor: pointer;
   }
   
-  .copy-link:hover {
+  .story .meta-row .copy-link:hover {
     color: #2c3e50;
   }
  

@@ -10,6 +10,7 @@
           "date": "2023-08-14",
           "coords": [44.9256, 25.4564],
           "city": "Târgoviște",
+          "country": "Romania",
           "photo": "img/sarut-mana.jpg",
           "tags": ["lingua", "cultura", "tradizione", "incontro"]
         },
@@ -19,6 +20,7 @@
           "content": "<p>Quando ero in Romania con la mia ragazza di allora, eravamo a Sinaia, una cittadina incantevole incastonata tra le montagne. Dopo una giornata passata tra natura, castelli e camminate, avevo voglia di qualcosa di familiare. “Dai, andiamo in quel ristorante in stile americano lì su in fondo”, dissi, già pregustando un hamburger o qualcosa di semplice e conosciuto.</p><p>Lei invece mi guardò con un sorriso furbo e disse: “Ma perché non proviamo questo? È tipico rumeno.” Aveva scelto un ristorante locale, uno di quei posti che dall’esterno non dicevano granché. Stavo per insistere, ma qualcosa nel suo tono – o forse semplicemente l’amore che provavo – mi fece dire sì.</p><p>E fu <strong>la scelta giusta</strong>. Anzi, fu <strong>una delle esperienze più vere</strong> che io abbia mai vissuto a tavola.</p><p>Non era solo il cibo, anche se era incredibile. Aglio ovunque, nel modo giusto. Profumi intensi, spezie che raccontavano storie. Ciorbă calda, carne che si scioglieva in bocca, pane rustico… ma era anche il modo in cui <strong>mi sentivo accolto</strong>, anche da chi non diceva una parola nella mia lingua.</p><p>Quel posto mi ricordò che la vera bellezza dei viaggi non è trovare ciò che conosci, ma <strong>lasciare che siano i luoghi a parlarti, a nutrirti, a sorprenderti</strong>.</p><p>E in quel momento, in quel piccolo ristorante rumeno, lontano da tutto ciò che mi era familiare… <strong>mi sono sentito a casa</strong>.</p>",
           "date": "2023-08-16",
           "city": "Sinaia",
+          "country": "Romania",
           "coords": [45.35, 25.55],
           "photo": "img/ristorante-sinaia.jpg",
           "tags": ["cibo", "esperienze", "viaggio", "romania"]
@@ -34,6 +36,7 @@
           "date": "2023-08-14",
           "coords": [44.9256, 25.4564],
           "city": "Târgoviște",
+          "country": "Romania",
           "photo": "img/sarut-mana.jpg",
           "tags": ["language", "culture", "tradition", "connection"]
         },{
@@ -42,6 +45,7 @@
           "content": "<p>When I was in Romania with my girlfriend at the time, we were in Sinaia, a charming little town nestled in the mountains. After a day spent walking, sightseeing and getting lost among castles and nature, I was craving something familiar. “Let’s go to that American-style restaurant down the street,” I said, already dreaming of a burger or something I knew well.</p><p>But she looked at me with a clever smile and said, “Why don’t we try this one? It’s local.” She pointed to a Romanian restaurant, one of those places that from the outside didn’t seem particularly special. I was about to insist, but something in her voice—or maybe just the love I felt—made me say yes.</p><p>And it was <strong>the right choice</strong>. Actually, it was <strong>one of the most authentic experiences</strong> I’ve ever had at a table.</p><p>It wasn’t just the food, even though that was amazing. Garlic everywhere, in just the right way. Intense aromas, spices that told stories. Warm ciorbă, tender meat, rustic bread... but also the way <strong>I felt welcomed</strong>, even by people who didn’t speak a single word of my language.</p><p>That place reminded me that the real beauty of traveling isn’t finding what you already know, but <strong>letting places speak to you, feed you, surprise you</strong>.</p><p>And in that moment, in that small Romanian restaurant, far from everything I was used to... <strong>I felt at home</strong>.</p>",
           "date": "2023-08-16",
           "city": "Sinaia",
+          "country": "Romania",
           "coords": [45.35, 25.55],
           "photo": "img/ristorante-sinaia.jpg",
           "tags": ["food", "experience", "travel", "romania"]
