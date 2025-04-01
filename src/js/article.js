@@ -1,7 +1,7 @@
 let currentLang = 'it';
 
 function loadStories(lang) {
-    const files = ['articles/romania.json', 'articles/spagna.json']; // 👈 Aggiungi i tuoi file qui
+    const files = ['articles/romania.json']; 
   
     Promise.all(files.map(file => $.getJSON(file))).then(allData => {
       let allStories = [];
