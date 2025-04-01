@@ -5,80 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Log - Luca</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <style src="src/style.css"></style>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f2f2f2;
-      color: #333;
-    }
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 1.5rem 2rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    .lang-selector {
-      margin: 1rem;
-      display: inline-block;
-      padding: 0.3rem 0.7rem;
-      background: #ecf0f1;
-      color: #2c3e50;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .lang-selector:hover {
-      background: #d0d3d4;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .story {
-      background: white;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-    .story img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .story h2 {
-      margin-top: 0;
-      color: #34495e;
-    }
-    .story .meta {
-      font-size: 0.9rem;
-      color: #888;
-      margin-bottom: 1rem;
-    }
-    .story .tags {
-      margin-top: 1rem;
-      font-size: 0.85rem;
-    }
-    .story .tags span {
-      background: #d0e6f7;
-      color: #2c3e50;
-      border-radius: 4px;
-      padding: 0.2rem 0.5rem;
-      margin-right: 5px;
-      display: inline-block;
-    }
-    .story p {
-      line-height: 1.6;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -88,6 +17,40 @@
       <span class="lang-selector" data-lang="en">English</span>
     </div>
   </header>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script>
+    const files = [
+      'articles/romania.json'
+    ];
+
+    const map = L.map('map').setView([45.0, 25.5], 6);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    Promise.all(files.map(f => fetch(f).then(r => r.json())))
+      .then(allData => {
+        allData.forEach(data => {
+          const stories = data.translations.it.stories; // o rileva la lingua attiva
+          stories.forEach(story => {
+            if (story.coords) {
+              const popup = `
+                <strong>${story.city}</strong><br>
+                ${data.country}<br>
+                <small>${story.date}</small><br>
+                <a href="index.html?article=${story.id}" target="_blank">Vai al racconto</a>
+              `;
+              L.marker(story.coords).addTo(map).bindPopup(popup);
+            }
+          });
+        });
+      });
+  </script>
+
 
   <main>
     <div id="stories"></div>
