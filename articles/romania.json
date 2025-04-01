@@ -5,44 +5,46 @@
       "stories": [
         {
           "id": "sarut-mana",
-          "title": "Sărut mâna: una frase che non si dice a chiunque",
-          "content": "Quando lo zio della mia ex mi insegnò 'Sărut mâna', non sapevo quanto fosse importante. L'ho detto per scherzo, ma ho capito che per loro ha un valore profondo. Un saluto pieno d'affetto, che si usa solo con chi ami davvero.",
+          "title": "Sărut mâna: una frase che contiene un mondo",
+          "content": "Non tutte le frasi sono uguali. Alcune si imparano, altre si sentono, ma poche si **ricevono** davvero. E quella volta in Romania, in una cucina semplice e accogliente, io ho ricevuto una frase che non si dice a chiunque: *„Sărut mâna”*.\n\nMe l’ha insegnata lo zio della mia ragazza. Parlavamo a metà tra l’italiano, il rumeno e i gesti. A un certo punto, quasi con solennità, mi disse: “Questa si dice solo alle persone a cui vuoi bene davvero.”\n\n„Sărut mâna” significa letteralmente “bacio la mano”. Ma è molto di più: è un segno di rispetto, affetto, riconoscenza. È un modo elegante, dolce, e profondamente umano di dire **“ti riconosco”, “ti onoro”, “ti tengo nel cuore”.**\n\nQuella frase non è da turista. È un piccolo dono culturale. È un modo che i rumeni hanno di accoglierti nella loro intimità, nella loro tradizione. E io l’ho ricevuta. E, scherzando, l’ho anche restituita… salvo poi capire che **non si scherza con ciò che è sacro per qualcuno**.\n\nEppure, in quel mio tentativo goffo, ho capito una cosa meravigliosa: quando un popolo ti insegna una parola che non si dice a tutti, **ti sta dicendo che ti considera uno di loro**.\n\nDa quel giorno, ogni volta che sento „Sărut mâna”, non penso solo a una frase. Penso alla Romania. Alla gente. Alla tavola. Al rispetto profondo che sanno dare. E al fatto che, per un attimo, mi hanno fatto sentire parte di quella bellezza.",
           "date": "2023-08-14",
           "city": "Târgoviște",
           "photo": "img/sarut.jpg",
-          "tags": ["lingua", "cultura", "famiglia"]
+          "tags": ["lingua", "cultura", "tradizione", "incontro"]
         },
         {
           "id": "ristorante-sinaia",
           "title": "Quel ristorante rumeno che ha cambiato tutto",
-          "content": "A Sinaia volevo andare in un ristorante americano, ma la mia ex mi convinse a provare quello tipico rumeno. Mai decisione fu più azzeccata: aglio, sapori intensi, e una cena che ricorderò per sempre.",
+          "content": "Quando ero in Romania con la mia ragazza di allora, eravamo a Sinaia, una cittadina incantevole incastonata tra le montagne. Dopo una giornata passata tra natura, castelli e camminate, avevo voglia di qualcosa di familiare. “Dai, andiamo in quel ristorante in stile americano lì su in fondo”, dissi, già pregustando un hamburger o qualcosa di semplice e conosciuto.\n\nLei invece mi guardò con un sorriso furbo e disse: “Ma perché non proviamo questo? È tipico rumeno.” Aveva scelto un ristorante locale, uno di quei posti che dall’esterno non dicevano granché. Stavo per insistere, ma qualcosa nel suo tono – o forse semplicemente l’amore che provavo – mi fece dire sì.\n\nE fu la scelta giusta. Anzi, fu una delle esperienze più vere che io abbia mai vissuto a tavola.\n\nNon era solo il cibo, anche se era incredibile. Aglio ovunque, nel modo giusto. Profumi intensi, spezie che raccontavano storie. Ciorbă calda, carne che si scioglieva in bocca, pane rustico… ma era anche il modo in cui mi sentivo accolto, anche da chi non diceva una parola nella mia lingua.\n\nQuel posto mi ricordò che la vera bellezza dei viaggi non è trovare ciò che conosci, ma lasciare che siano i luoghi a parlarti, a nutrirti, a sorprenderti.\n\nE in quel momento, in quel piccolo ristorante rumeno, lontano da tutto ciò che mi era familiare… mi sono sentito a casa.",
           "date": "2023-08-16",
           "city": "Sinaia",
           "photo": "img/sinaia-food.jpg",
-          "tags": ["cibo", "esperienze", "sorpresa"]
+          "tags": ["cibo", "esperienze", "viaggio", "romania"]
         }
+
       ]
     },
     "en": {
       "stories": [
         {
           "id": "sarut-mana",
-          "title": "Sărut mâna: a phrase you don’t say to just anyone",
-          "content": "When my ex’s uncle taught me 'Sărut mâna', I didn’t realize how meaningful it was. I said it as a joke, but I soon learned it’s a gesture full of affection, used only with people you truly care about.",
+          "title": "Sărut mâna: a phrase that carries a whole world",
+          "content": "Not all phrases are the same. Some you learn, some you feel… but very few you truly **receive**. And that time in Romania, in a warm, simple kitchen, I received a phrase that you don’t say to just anyone: *„Sărut mâna.”*\n\nMy girlfriend’s uncle taught it to me. We were talking in a mix of Italian, Romanian, and gestures. At one point, with almost a solemn tone, he said: “You only say this to someone you truly care about.”\n\n„Sărut mâna” literally means “I kiss your hand.” But it’s more than that. It’s a gesture of respect, affection, and gratitude. It’s an elegant, soft, deeply human way of saying: **“I see you,” “I honor you,” “I hold you close.”**\n\nThat phrase isn’t for tourists. It’s a cultural gift. It’s a glimpse into the Romanian soul, a warm invitation into their traditions. And I was lucky enough to receive it. I even jokingly said it back… only to realize later that **you don’t joke with what others hold sacred.**\n\nYet in that awkward moment, I understood something beautiful: when a people teaches you a phrase that they only use with their loved ones, **they’re telling you that you are welcome among them**.\n\nSince that day, every time I hear “Sărut mâna”, I don’t just think of words. I think of Romania. Of its people. Of their deep respect and generosity. And of the fact that, for a moment, they made me feel like one of their own.",
           "date": "2023-08-14",
           "city": "Târgoviște",
           "photo": "img/sarut.jpg",
-          "tags": ["language", "culture", "family"]
+          "tags": ["language", "culture", "tradition", "connection"]
         },
         {
           "id": "ristorante-sinaia",
           "title": "That Romanian restaurant changed everything",
-          "content": "In Sinaia I wanted to go to an American-style place, but my ex convinced me to try a local Romanian one. Best decision ever: garlic, rich flavors, and a dinner I’ll never forget.",
+          "content": "When I was in Romania with my girlfriend at the time, we were in Sinaia, a charming little town nestled in the mountains. After a day spent walking, sightseeing and getting lost among castles and nature, I was craving something familiar. “Let’s go to that American-style restaurant down the street,” I said, already dreaming of a burger or something I knew well.\n\nBut she looked at me with a clever smile and said, “Why don’t we try this one? It’s local.” She pointed to a Romanian restaurant, one of those places that from the outside didn’t seem particularly special. I was about to insist, but something in her voice—or maybe just the love I felt—made me say yes.\n\nAnd it was the right choice. Actually, it was one of the most authentic experiences I’ve ever had at a table.\n\nIt wasn’t just the food, even though that was amazing. Garlic everywhere, in just the right way. Intense aromas, spices that told stories. Warm ciorbă, tender meat, rustic bread... but also the way I felt welcomed, even by people who didn’t speak a single word of my language.\n\nThat place reminded me that the real beauty of traveling isn’t finding what you already know, but letting places speak to you, feed you, surprise you.\n\nAnd in that moment, in that small Romanian restaurant, far from everything I was used to... I felt at home.",
           "date": "2023-08-16",
           "city": "Sinaia",
           "photo": "img/sinaia-food.jpg",
-          "tags": ["food", "experience", "surprise"]
+          "tags": ["food", "experience", "travel", "romania"]
         }
+
       ]
     }
   }
