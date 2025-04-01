@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Log - Luca</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-  <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="src/css/style.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -19,76 +19,13 @@
   </header>
 
   <div id="map"></div>
-
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-  <script>
-    const files = [
-      'articles/romania.json'
-    ];
-
-    const map = L.map('map').setView([45.0, 25.5], 6);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    Promise.all(files.map(f => fetch(f).then(r => r.json())))
-      .then(allData => {
-        allData.forEach(data => {
-          const stories = data.translations.it.stories; // o rileva la lingua attiva
-          stories.forEach(story => {
-            if (story.coords) {
-              const popup = `
-                <strong>${story.city}</strong><br>
-                ${data.country}<br>
-                <small>${story.date}</small><br>
-                <a href="index.html?article=${story.id}" target="_blank">Vai al racconto</a>
-              `;
-              L.marker(story.coords).addTo(map).bindPopup(popup);
-            }
-          });
-        });
-      });
-  </script>
-
-
+  
   <main>
     <div id="stories"></div>
   </main>
 
-  <script>
-    let currentLang = 'it';
-
-    function loadStories(lang) {
-      $.getJSON('articles/romania.json', function(data) {
-        const stories = data.translations[lang]?.stories || data.translations['en'].stories;
-        $('#stories').html('');
-        stories.forEach(story => {
-          const photo = story.photo ? `<img src="${story.photo}" alt="${story.title}" />` : '';
-          const date = story.date ? `<div class="meta">${story.date}</div>` : '';
-          const tags = story.tags ? `<div class="tags">${story.tags.map(tag => `<span>${tag}</span>`).join('')}</div>` : '';
-
-          $('#stories').append(`
-            <div class="story">
-              ${photo}
-              <h2>${story.title}</h2>
-              ${date}
-              <div class="content">${story.content}</div>
-              ${tags}
-            </div>
-          `);
-        });
-      });
-    }
-
-    $(document).ready(function() {
-      loadStories(currentLang);
-
-      $('.lang-selector').click(function() {
-        currentLang = $(this).data('lang');
-        loadStories(currentLang);
-      });
-    });
-  </script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="src/js/article.js"></script>
+  <script src="src/js/map.js"></script>  
 </body>
 </html>
