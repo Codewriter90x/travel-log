@@ -24,7 +24,18 @@
           "coords": [45.35, 25.55],
           "photo": "img/ristorante-sinaia.jpg",
           "tags": ["cibo", "esperienze", "viaggio", "romania"]
+        },
+        {
+          "id": "rispetto-quando-nessuno-guarda",
+          "title": "Rispetto anche quando nessuno guarda",
+          "content": "<p>Durante il mio viaggio in Romania, sono entrato in un cimitero vicino Târgoviște. Era enorme, molto più grande di quelli che ho visto in Italia.</p><p>Ricordo che era inverno, faceva freddo. Ma stranamente era anche una giornata soleggiata. E c’era silenzio. Non il silenzio sereno, ma uno di quelli che ti restano addosso. La prima parte del cimitero era ben curata, ordinata. Ma più mi addentravo, più tutto cambiava. Molte tombe erano allagate, immerse nell’acqua stagnante. Quelle più semplici, senza lapide o bordo, sembravano quasi sparite nella terra. E il confine tra i vialetti e le sepolture era così incerto che avevo paura di calpestare qualcosa che non dovevo.</p><p>C’erano anche dei cani randagi. Vagavano tra le tombe, come se cercassero qualcuno o qualcosa. E tutto questo insieme... mi ha dato un nodo in gola.</p><p>Mi è dispiaciuto. Sul serio. Non per com’era il posto in sé, ma per quello che rappresentava. O meglio, per quello che non rappresentava più. C’erano persone lì sotto. Con nomi, vite, legami, storie. Ora solo acqua, fango e silenzio.</p><p>Eppure io... io me le ricordo. Anche se non so chi fossero. Camminando cercavo con lo sguardo qualsiasi cosa: un nome, una data, un oggetto lasciato lì. Volevo dire qualcosa, anche solo nella mia testa: \"Scusatemi. Non volevo.\".</p><p>Forse è la povertà. Forse è la lontananza. O forse è solo che il tempo passa, e tutto si spegne piano. Ma quel giorno ho capito una cosa: il rispetto non ha bisogno di pubblico.</p><p>Camminare con attenzione. Fermarsi un attimo. Pensare a chi c’era prima. È una forma d’amore. Silenziosa. Ma vera. Anche se nessuno ti guarda.</p><p>E forse è proprio lì che inizia il rispetto: quando lo fai solo perché lo senti.</p>",
+          "date": "2023-08-17",
+          "city": "Târgoviște",
+          "country": "Romania",
+          "photo": "img/cimitero.jpg",
+          "tags": ["riflessioni", "memoria", "viaggio", "romania"]
         }
+        
       ]
     },
     "en": {
@@ -49,7 +60,17 @@
           "coords": [45.35, 25.55],
           "photo": "img/ristorante-sinaia.jpg",
           "tags": ["food", "experience", "travel", "romania"]
+        },
+        {
+          "id": "rispetto-quando-nessuno-guarda",
+          "title": "Respect, even when no one is watching",
+          "content": "<p>During my trip to Romania, I walked into a cemetery near Târgoviște. It was huge—much larger than any I’ve seen in Italy.</p><p>I remember it was winter, and cold. Yet strangely, it was also a sunny day. And there was silence. Not a peaceful silence… but the kind that clings to you. The first part of the cemetery was well kept, tidy. But the deeper I went, the more everything changed. Many graves were flooded, submerged in stagnant water. The simplest ones, with no stone or border, looked as if they had vanished into the ground. The paths and the graves blended so much that I was afraid of stepping on something I shouldn’t.</p><p>There were also stray dogs wandering among the graves, as if searching for someone or something. And all of it together… gave me a lump in my throat.</p><p>I felt sad. Truly. Not because of how the place looked, but because of what it no longer represented. There were people buried there. With names, lives, bonds, stories. Now only water, mud, and silence remained.</p><p>And yet I... I remember them. Even if I never knew who they were. As I walked, I searched for anything—names, dates, a small object left behind. I wanted to say something, even just in my mind: “I’m sorry. I didn’t mean to.”</p><p>Maybe it’s poverty. Maybe distance. Or maybe it’s just time, slowly fading everything away. But that day I understood something: <strong>respect doesn’t need an audience</strong>.</p><p>Walking carefully. Pausing for a second. Thinking of those who came before you. That’s a form of love. Quiet. But real. Even when no one is watching.</p><p>And maybe that’s exactly when respect truly begins: when you show it just because it matters to you.</p>",
+          "date": "2023-08-17",
+          "city": "Târgoviște",
+          "photo": "img/cimitero.jpg",
+          "tags": ["reflection", "memory", "travel", "romania"]
         }
+        
       ]
     }
   }
