@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Log - Luca</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; background: #f9f9f9; }
+    h1, h2 { color: #333; }
+    .lang-selector { margin-right: 10px; cursor: pointer; text-decoration: underline; }
+    .story { margin-bottom: 2rem; padding: 1rem; background: #fff; border-radius: 8px; box-shadow: 0 0 4px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <h1>Travel Stories</h1>
+  <div>
+    <span class="lang-selector" data-lang="it">Italiano</span>
+    <span class="lang-selector" data-lang="en">English</span>
+  </div>
+  <div id="stories"></div>
+
+  <script>
+    let currentLang = 'it';
+
+    function loadStories(lang) {
+      $.getJSON('articles/romania.json', function(data) {
+        const stories = data.translations[lang]?.stories || data.translations['en'].stories;
+        $('#stories').html('');
+        stories.forEach(story => {
+          $('#stories').append(`
+            <div class="story">
+              <h2>${story.title}</h2>
+              <p>${story.content}</p>
+            </div>
+          `);
+        });
+      });
+    }
+
+    $(document).ready(function() {
+      loadStories(currentLang);
+
+      $('.lang-selector').click(function() {
+        currentLang = $(this).data('lang');
+        loadStories(currentLang);
+      });
+    });
+  </script>
+</body>
+</html>
