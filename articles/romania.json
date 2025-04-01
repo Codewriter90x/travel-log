@@ -1,34 +1,47 @@
 {
-  "id": "romania",
   "country": "Romania",
   "translations": {
     "it": {
-      "title": "Romania",
       "stories": [
         {
           "id": "sarut-mana",
           "title": "Sărut mâna: una frase che non si dice a chiunque",
-          "content": "Quando lo zio della mia ex mi insegnò 'Sărut mâna', non sapevo quanto fosse importante. L'ho detto per scherzo, ma ho capito che per loro ha un valore profondo. Un saluto pieno d'affetto, che si usa solo con chi ami davvero."
+          "content": "Quando lo zio della mia ex mi insegnò 'Sărut mâna', non sapevo quanto fosse importante. L'ho detto per scherzo, ma ho capito che per loro ha un valore profondo. Un saluto pieno d'affetto, che si usa solo con chi ami davvero.",
+          "date": "2023-08-14",
+          "city": "Târgoviște",
+          "photo": "img/sarut.jpg",
+          "tags": ["lingua", "cultura", "famiglia"]
         },
         {
-          "id": "il-ristorante",
+          "id": "ristorante-sinaia",
           "title": "Quel ristorante rumeno che ha cambiato tutto",
-          "content": "A Sinaia volevo andare in un ristorante americano, ma la mia ex mi convinse a provare quello tipico rumeno. Mai decisione fu più azzeccata: aglio, sapori intensi, e una cena che ricorderò per sempre."
+          "content": "A Sinaia volevo andare in un ristorante americano, ma la mia ex mi convinse a provare quello tipico rumeno. Mai decisione fu più azzeccata: aglio, sapori intensi, e una cena che ricorderò per sempre.",
+          "date": "2023-08-16",
+          "city": "Sinaia",
+          "photo": "img/sinaia-food.jpg",
+          "tags": ["cibo", "esperienze", "sorpresa"]
         }
       ]
     },
     "en": {
-      "title": "Romania",
       "stories": [
         {
           "id": "sarut-mana",
           "title": "Sărut mâna: a phrase you don’t say to just anyone",
-          "content": "When my ex’s uncle taught me 'Sărut mâna', I didn’t realize how meaningful it was. I said it as a joke, but later learned it’s a phrase full of affection, reserved for those you truly care about."
+          "content": "When my ex’s uncle taught me 'Sărut mâna', I didn’t realize how meaningful it was. I said it as a joke, but I soon learned it’s a gesture full of affection, used only with people you truly care about.",
+          "date": "2023-08-14",
+          "city": "Târgoviște",
+          "photo": "img/sarut.jpg",
+          "tags": ["language", "culture", "family"]
         },
         {
-          "id": "il-ristorante",
+          "id": "ristorante-sinaia",
           "title": "That Romanian restaurant changed everything",
-          "content": "In Sinaia I wanted to go to an American restaurant, but my ex convinced me to try a local Romanian one. Best decision ever: garlic, deep flavors, and a dinner I’ll never forget."
+          "content": "In Sinaia I wanted to go to an American-style place, but my ex convinced me to try a local Romanian one. Best decision ever: garlic, rich flavors, and a dinner I’ll never forget.",
+          "date": "2023-08-16",
+          "city": "Sinaia",
+          "photo": "img/sinaia-food.jpg",
+          "tags": ["food", "experience", "surprise"]
         }
       ]
     }
