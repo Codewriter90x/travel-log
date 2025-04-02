@@ -15780,7 +15780,7 @@ header {
   }
 }
 header.fixed-top + main {
-  padding-top: calc(1.5rem + 56px);
+  padding-top: calc(1.5rem + 30px);
   margin-bottom: 1.5rem;
 }
 
