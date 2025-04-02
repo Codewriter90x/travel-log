@@ -19,9 +19,9 @@ function loadStories(lang) {
       $('#stories').html('');
       allStories.forEach(story => {
         const tags = story.tags?.map(tag => `<span class="badge bg-secondary me-1">${tag}</span>`).join('') || '';
-        const avatar = story.avatar || 'assets/images/avatar/default.jpg';
-        const author = story.author || 'Viaggiatore';
-        const role = story.role || '';
+        const avatar = story.avatar || 'assets/images/avatar/baron_luca.jpg';
+        const author = story.author || 'Baron Luca';
+        const role = story.role || 'Senior Developer';
         const summary = story.summary || '';
         const cityInfo = story.city ? '— ' + story.city : '';
         const countryInfo = story.country ? `(${story.country})` : '';
@@ -32,7 +32,7 @@ function loadStories(lang) {
               <div class="d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                   <div class="avatar avatar-story me-2">
-                    <a href="#!"><img class="avatar-img rounded-circle" src="${avatar}" alt=""></a>
+                    <a href=""><img class="avatar-img rounded-circle" src="${avatar}" alt=""></a>
                   </div>
                   <div>
                     <div class="nav nav-divider">
@@ -47,6 +47,7 @@ function loadStories(lang) {
                     <i class="bi bi-three-dots"></i>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
+                  <span class="copy-link" onclick="copyLink('${story.id}')" style="cursor:pointer;" title="Copia link">🔗</span>
                     <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark fa-fw pe-2"></i>Salva</a></li>
                     <li><a class="dropdown-item" href="#"><i class="bi bi-person-x fa-fw pe-2"></i>Non seguire ${author}</a></li>
                     <li><a class="dropdown-item" href="#"><i class="bi bi-x-circle fa-fw pe-2"></i>Nascondi</a></li>
@@ -65,14 +66,7 @@ function loadStories(lang) {
             </div>
   
             ${tags ? `<div class="card-footer">${tags}</div>` : ''}
-            <div class="card-footer border-0 pt-0">
-              <a href="#!" role="button" class="btn btn-link btn-link-loader btn-sm text-secondary d-flex align-items-center" data-bs-toggle="button" aria-pressed="true">
-                <div class="spinner-dots me-2">
-                  <span class="spinner-dot"></span><span class="spinner-dot"></span><span class="spinner-dot"></span>
-                </div>
-                Load more comments
-              </a>
-            </div>
+           
           </div>
         `);
       });
