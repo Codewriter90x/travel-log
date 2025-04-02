@@ -86,6 +86,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/vendor/flatpickr/dist/flatpickr.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/plyr/plyr.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/zuck.js/dist/zuck.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -109,7 +110,8 @@
 
 	  	<!-- Main content START -->
 			<div class="col-md-8 col-lg-9 vstack gap-4">
-
+        <div id="map"></div>
+        
         <list-stories></list-stories>
 
 			</div>
@@ -244,6 +246,9 @@
 <!-- =======================
 JS libraries, plugins and custom scripts -->
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
 <!-- Bootstrap JS -->
 <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -265,6 +270,8 @@ JS libraries, plugins and custom scripts -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
 <script src="assets/js/article.js"></script>
+<script src="src/js/map.js"></script>  
+
 <script id="MainMenu">
   const MainMenu = {
     template: `<div v-html="html"></div>`,
