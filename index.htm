@@ -284,15 +284,17 @@ JS libraries, plugins and custom scripts -->
   const ListStories = {
     template: `<div v-html="html"></div>`,
     data() {
-      return {
-        html: ''
-      };
+      return { html: '' };
     },
     mounted() {
       fetch('components/list-stories.html')
         .then(res => res.text())
         .then(html => {
           this.html = html;
+          // ⬇️ Attendi un attimo e poi carica le storie nel DOM caricato
+          setTimeout(() => {
+            loadStories(currentLang);
+          }, 200); 
         });
     }
   };

@@ -1,64 +1,47 @@
 let currentLang = 'it';
-
 function loadStories(lang) {
-    const files = ['articles/romania.json']; 
-  
-    Promise.all(files.map(file => $.getJSON(file))).then(allData => {
-      let allStories = [];
-  
-      allData.forEach(data => {
-        const stories = data.translations[lang]?.stories || data.translations['en'].stories;
-        stories.forEach(story => {
-          story.country = data.country || ''; // Aggiungi info nazione (se nel JSON)
-          allStories.push(story);
-        });
+  const files = ['articles/romania.json'];
+
+  Promise.all(files.map(file => $.getJSON(file))).then(allData => {
+    let allStories = [];
+
+    allData.forEach(data => {
+      const stories = data.translations[lang]?.stories || data.translations['en'].stories;
+      stories.forEach(story => {
+        story.country = data.country || '';
+        allStories.push(story);
       });
-  
-      // Ordina tutte le storie insieme per data decrescente
-      allStories.sort((a, b) => new Date(b.date) - new Date(a.date));
-  
-      $('#stories').html('');
-      allStories.forEach(story => {
-        const photo = story.photo ? `<img src="${story.photo}" alt="${story.title}" />` : '';
-        const tags = story.tags ? `<div class="tags">${story.tags.map(tag => `<span>${tag}</span>`).join('')}</div>` : '';
-        $('#stories').append(`
-          <div class="story" id="${story.id}">
-            ${photo}
-            <h2>${story.title}</h2> 
-            <div class="meta-row">
-              <div class="meta">${story.date} ${story.city ? '— ' + story.city : ''} ${story.country ? '(' + story.country + ')' : ''}</div>
-              <span class="copy-link" title="Copia link" onclick="copyLink('${story.id}')">🔗</span>
+    });
+
+    allStories.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    $('#stories').html('');
+    allStories.forEach(story => {
+      $('#stories').append(`
+        <div class="card mb-4" id="${story.id}">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <div>
+              <h5 class="mb-0">${story.title}</h5>
+              <small class="text-muted">${story.date} ${story.city ? '— ' + story.city : ''} ${story.country ? '(' + story.country + ')' : ''}</small>
             </div>
-            <div class="content">${story.content}</div>
-            ${tags}
+            <span class="copy-link" onclick="copyLink('${story.id}')" style="cursor:pointer;" title="Copia link">🔗</span>
           </div>
-        `);
-      });
-  
-      // Scroll automatico se presente un hash nell'URL
-      const targetId = window.location.hash?.substring(1);
-      if (targetId) {
-        const el = document.getElementById(targetId);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
+          <div class="card-body">
+            ${story.photo ? `<img src="${story.photo}" class="card-img-top mb-3" alt="${story.title}">` : ''}
+            <div class="content">${story.content}</div>
+          </div>
+          ${story.tags ? `
+            <div class="card-footer">
+              ${story.tags.map(tag => `<span class="badge bg-secondary me-1">${tag}</span>`).join('')}
+            </div>` : ''}
+        </div>
+      `);
     });
-  }
-  
 
-function copyLink(id) {
-    const url = `${window.location.origin}${window.location.pathname}#${id}`;
-    navigator.clipboard.writeText(url).then(() => {
-        alert('Link copiato negli appunti!');
-    });
+    const targetId = window.location.hash?.substring(1);
+    if (targetId) {
+      const el = document.getElementById(targetId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 }
-
-$(document).ready(function() {
-    loadStories(currentLang);
-
-    $('.lang-selector').click(function() {
-    currentLang = $(this).data('lang');
-    loadStories(currentLang);
-    });
-});
