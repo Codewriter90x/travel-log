@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Blog con Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .lang-switcher {
+      margin-top: 1rem;
+    }
+    .story {
+      background: white;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 700px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .story img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .meta {
+      color: gray;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .copy-link {
+      float: right;
+      cursor: pointer;
+    }
+    .tags span {
+      background: #ddd;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      margin-right: 5px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>🌍 {{ title }}</h1>
+      <div class="lang-switcher">
+        <button @click="switchLang('it')">🇮🇹 Italiano</button>
+        <button @click="switchLang('en')">🇬🇧 English</button>
+      </div>
+    </header>
+
+    <div v-for="story in sortedStories" :key="story.id" class="story" :id="story.id">
+      <img v-if="story.photo" :src="story.photo" :alt="story.title">
+      <h2>{{ story.title }}</h2>
+      <div class="meta">
+        {{ story.date }} {{ story.city ? '— ' + story.city : '' }} {{ story.country ? '(' + story.country + ')' : '' }}
+        <span class="copy-link" @click="copyLink(story.id)" title="Copia link">🔗</span>
+      </div>
+      <div class="content" v-html="story.content"></div>
+      <div class="tags" v-if="story.tags">
+        <span v-for="tag in story.tags" :key="tag">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          lang: 'it',
+          stories: [],
+          title: 'Travel Stories'
+        };
+      },
+      computed: {
+        sortedStories() {
+          return this.stories.sort((a, b) => new Date(b.date) - new Date(a.date));
+        }
+      },
+      methods: {
+        switchLang(l) {
+          this.lang = l;
+          this.loadStories();
+        },
+        loadStories() {
+          const files = [
+            'articles/romania.json'
+          ];
+          Promise.all(files.map(f => fetch(f).then(res => res.json())))
+            .then(allData => {
+              let combined = [];
+              allData.forEach(data => {
+                const list = data.translations[this.lang]?.stories || data.translations['en'].stories;
+                list.forEach(story => {
+                  story.country = data.country || '';
+                  combined.push(story);
+                });
+              });
+              this.stories = combined;
+              this.scrollToHash();
+            });
+        },
+        copyLink(id) {
+          const url = `${location.origin}${location.pathname}#${id}`;
+          navigator.clipboard.writeText(url).then(() => alert('Link copiato!'));
+        },
+        scrollToHash() {
+          const hash = location.hash.substring(1);
+          if (hash) {
+            setTimeout(() => {
+              const el = document.getElementById(hash);
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+          }
+        }
+      },
+      mounted() {
+        this.loadStories();
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
