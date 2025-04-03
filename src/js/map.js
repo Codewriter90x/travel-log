@@ -1,5 +1,5 @@
 const files = [
-    '/articles/romania.json'
+    '/travel-log/articles/romania.json'
   ];
 
   const map = L.map('map').setView([45.0, 25.5], 6);
